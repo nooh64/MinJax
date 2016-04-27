@@ -4,7 +4,13 @@ Minimal Ajax
 
 call Ajax without jquery
 
-example 1
+## Usage
+to add library to your project
+```html
+<script src="https://cdn.rawgit.com/nooh64/MinJax/master/build/mjax.min.js"></script>
+```
+
+## example 1
 ```js
 ajax.post("/index.html")
 	.addHeader('header1','value') //you can set headers
@@ -16,7 +22,7 @@ ajax.post("/index.html")
 });
 ```
 
-example 2
+## example 2
 ```js
 ajax.get("/index.html")
 	.send(function(status,data){
