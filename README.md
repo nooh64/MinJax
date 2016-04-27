@@ -10,7 +10,7 @@ ajax.post("/index.html")
 	.addHeader('header1','value') //you can set headers
 	.addHeader('header2','value')
 	.setData({'key':'value','key2':'value2'}) //set data if post request
-	.setDev("Development Responsen",200) // temporary response and satus code
+	.setDev("Development Response",200) // temporary response and status code
 	.send(function(status,data){  // send request and callback
 		alert(data);
 });
