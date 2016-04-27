@@ -90,12 +90,16 @@
   
 		//check for development mode
 		if(this.isDevMode){
-			callback(this.devStatus,this.devData);
+			if(typeof callback !== 'undefined'){
+				callback(this.devStatus,this.devData);
+			}
 			return;
 		}
   		xmlhttp.onreadystatechange = function() {	
 			if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
-				callback(xmlhttp.status,xmlhttp.responseText);
+				if(typeof callback !== 'undefined'){
+					callback(xmlhttp.status,xmlhttp.responseText);
+				}
 			}
 		};		
 		if(isPost){
